@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="js/config.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+<body>
+
+    <div id="weather-div">
+
+        <!--Non-stop Background Video-->
+        <video autoplay muted loop id="myVideo">
+            <source src="media/background-video.mp4" type="video/mp4">
+        </video>
+
+        <!---Search City Form-->
+        <form id="form" onsubmit="getCityWeather();return false">
+            <div class="form-div">
+              <button type="button" class="search-btn" id="searchWeather">
+                <i class="fa fa-search"></i>
+              </button>
+              <input type="text" id="city" placeholder="Search city" autocomplete="off"/>
+              <br />
+              <!--If location is not accurate or empty show error msg-->
+              <span class="error-msg" id="errorSpan"></span>
+            </div>
+        </form>
+
+        <!---Weather Details Box-->      
+        <div id="weather-result">
+
+            <!--Temperature and city div in left side of the box-->
+            <div class="left-div">
+                <!--City and Unit value-->
+                <div id="cityDiv" style="display: none;"></div>
+                <div id="unit"></div>
+                <!--Toogle Button to view temperature in Farenhite or Celcius-->
+                <button id="convert-units-btn" onclick="convertUnit(document.getElementById('cityDiv').innerText, document.getElementById('unit').innerText);"></button>
+                <div id="temperature"></div>
+                <div id="cityCountry"></div>
+                
+            </div>
+            
+            <!--Weather Image and description in right side of the box-->
+            <div class="right-div">
+                <img id="descImage" alt="Weather Icon" width="150px" height="150px"/> 
+                <div id="description"></div>
+            </div>
+
+            <!--Other Temperature Details div in bottom of the box-->
+            <div class="bottom-div">
+                
+                <div class="temp-item">
+                    <img id="imgIcon" src="media/feels_icon.png" width="50px" height="50px"/> 
+                    <h2 id="feelsLikeLabel"></h2>
+                    <p id="feelsLike"></p>
+                </div>
+
+                <div class="temp-item">
+                    <img id="imgIcon" src="media/humidity_icon.png" width="40px" height="50px"/> 
+                    <h2 id="humidityLabel"></h2>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="temp-item">
+                    <img id="imgIcon" src="media/pressure_icon.png" width="50px" height="50px"/> 
+                    <h2 id="pressureLabel"></h2>
+                    <p id="pressure"></p>
+                </div>
+
+                <div class="temp-item">
+                    <img id="imgIcon" src="media/windDir_icon.png" width="50px" height="50px"/> 
+                    <h2 id="visibilityLabel"></h2>
+                    <p id="visibility"></p>
+                </div>
+
+                <div class="temp-item">
+                    <img id="imgIcon" src="media/windSpeed_icon.png" width="50px" height="50px"/> 
+                    <h2 id="windSpeedLabel"></h2>
+                    <p id="windSpeed"></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>
