@@ -3,8 +3,8 @@ window.onload = init;
 function init(){
 
     //units
-    celciusUnit = "C°";
-    farenheitUnit = "F°";
+    celciusUnit = "C\u00B0";
+    farenheitUnit = "F\u00B0";
     celcius = "metric";
     farenheit = "imperial";
 
@@ -129,7 +129,8 @@ function getCityWeather(){
         //if searching country length is less more than 3
         if(searchCity.length > 3){
             //fetching Weather Data - calling function
-            getWeatherApiData(searchCity, celcius);     
+            getWeatherApiData(searchCity, celcius);
+
         } else {
 
             //if not then display the error message (i.e. No matching location found!)
@@ -142,6 +143,9 @@ function getCityWeather(){
                 errorSpan.innerHTML="";
             },2000);
         }
+
+        //return false so that it shows the searched weather
+        return false;
     }
     else{
         //display error message if empty
@@ -156,6 +160,7 @@ function getCityWeather(){
 
     //clear the search city form 
     document.getElementById("form").reset();
+
 }
 
  //function to change or convert the data according to the units i.e. Celcius or Farenhite

@@ -9,11 +9,14 @@ body{
 }
 
 video{
-    position:relative;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: -20;
+            
 }
 
 form{
@@ -74,9 +77,9 @@ input[type='text'] {
     top: 0;
     right: 0;
     left: 0;
-    margin-top: 15vw;
+    margin-top: 16vw;
     width: 55vw;
-    height: 30vw;
+    height: 32vw;
     border-radius: 1.5vw;
     color: #000;
     background-color: #DFDFDF;
@@ -160,6 +163,11 @@ img {
     text-align: center;
 }
 
+#descImage{
+    width: 8.2vw;
+    height: 8vw;
+
+}
 .temp-item{
     display: block;
 }
@@ -186,11 +194,14 @@ img {
 
 #imgIcon {
     display: block;
+    width: 3.2vw;
+    height: 3vw;
     margin-block-start: 1.03vw;
     margin-block-end: 1.03vw;
     font-weight: bold;
     
 }
+
 
 #imgIcon:hover{
     transform: scale(1.5);

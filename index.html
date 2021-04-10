@@ -18,7 +18,8 @@
         </video>
 
         <!---Search City Form-->
-        <form id="form" onsubmit="getCityWeather();return false">
+        <!--Add return so that the form will not reload the page and show the results in same html page-->
+        <form id="form" onsubmit="return getCityWeather();">
             <div class="form-div">
               <button type="button" class="search-btn" id="searchWeather">
                 <i class="fa fa-search"></i>
@@ -47,7 +48,7 @@
             
             <!--Weather Image and description in right side of the box-->
             <div class="right-div">
-                <img id="descImage" alt="Weather Icon" width="150px" height="150px"/> 
+                <img id="descImage" alt="Weather Icon"/> 
                 <div id="description"></div>
             </div>
 
@@ -55,31 +56,31 @@
             <div class="bottom-div">
                 
                 <div class="temp-item">
-                    <img id="imgIcon" src="media/feels_icon.png" width="50px" height="50px"/> 
+                    <img id="imgIcon" src="media/feels_icon.png"/> 
                     <h2 id="feelsLikeLabel"></h2>
                     <p id="feelsLike"></p>
                 </div>
 
                 <div class="temp-item">
-                    <img id="imgIcon" src="media/humidity_icon.png" width="40px" height="50px"/> 
+                    <img id="imgIcon" src="media/humidity_icon.png"/> 
                     <h2 id="humidityLabel"></h2>
                     <p id="humidity"></p>
                 </div>
 
                 <div class="temp-item">
-                    <img id="imgIcon" src="media/pressure_icon.png" width="50px" height="50px"/> 
+                    <img id="imgIcon" src="media/pressure_icon.png"/> 
                     <h2 id="pressureLabel"></h2>
                     <p id="pressure"></p>
                 </div>
 
                 <div class="temp-item">
-                    <img id="imgIcon" src="media/windDir_icon.png" width="50px" height="50px"/> 
+                    <img id="imgIcon" src="media/visibility_icon.png"/> 
                     <h2 id="visibilityLabel"></h2>
                     <p id="visibility"></p>
                 </div>
 
                 <div class="temp-item">
-                    <img id="imgIcon" src="media/windSpeed_icon.png" width="50px" height="50px"/> 
+                    <img id="imgIcon" src="media/windSpeed_icon.png"/> 
                     <h2 id="windSpeedLabel"></h2>
                     <p id="windSpeed"></p>
                 </div>
