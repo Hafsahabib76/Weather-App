@@ -192,7 +192,7 @@ img {
     text-align: center;
 }
 
-#imgIcon {
+.imgIcon {
     display: block;
     width: 3.2vw;
     height: 3vw;
@@ -203,7 +203,7 @@ img {
 }
 
 
-#imgIcon:hover{
+.imgIcon:hover{
     transform: scale(1.5);
 } 
 
