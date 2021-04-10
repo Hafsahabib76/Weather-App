@@ -143,9 +143,6 @@ function getCityWeather(){
                 errorSpan.innerHTML="";
             },2000);
         }
-
-        //return false so that it shows the searched weather
-        return false;
     }
     else{
         //display error message if empty
@@ -160,6 +157,9 @@ function getCityWeather(){
 
     //clear the search city form 
     document.getElementById("form").reset();
+
+    //return false so that it shows the searched weather
+    return false;
 
 }
 
